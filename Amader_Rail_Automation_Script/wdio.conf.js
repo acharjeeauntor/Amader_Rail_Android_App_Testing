@@ -3,7 +3,7 @@ exports.config = {
     port: 4723,
     
     specs: [
-        './test/specs/**/home.spec.js'
+        './test/specs/**/traintimeline.spec.js'
     ],
 
     
