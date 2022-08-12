@@ -3,7 +3,7 @@ exports.config = {
     port: 4723,
     
     specs: [
-        './test/specs/**/ticketprice.spec.js'
+        './test/specs/**/traintracking.spec.js'
     ],
 
     
