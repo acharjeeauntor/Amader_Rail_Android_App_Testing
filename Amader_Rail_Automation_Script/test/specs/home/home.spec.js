@@ -1,6 +1,6 @@
-const landingScreen = require("../../screenobjects/landingscreen")
-const registrationScreen = require("../../screenobjects/registrationscreen")
-const homeScreen = require("../../screenobjects/homescreen")
+const landingScreen = require("../../screenobjects/landing/landingscreen")
+const registrationScreen = require("../../screenobjects/registration/registrationscreen")
+const homeScreen = require("../../screenobjects/home/homescreen")
 const registrationData = require("../../testdata/registrationData.json")
 
 describe('Verify Home Screen', () => {

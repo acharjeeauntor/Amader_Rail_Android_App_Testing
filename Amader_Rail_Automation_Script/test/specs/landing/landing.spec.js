@@ -1,5 +1,5 @@
-const landingScreen = require("../../screenobjects/landingscreen")
-const registrationScreen = require("../../screenobjects/registrationscreen")
+const landingScreen = require("../../screenobjects/landing/landingscreen")
+const registrationScreen = require("../../screenobjects/registration/registrationscreen")
 
 describe('Verify Landing Screen', () => {
     it('TC _001: Verify User can view landing pages for first time usage',async()=>{
