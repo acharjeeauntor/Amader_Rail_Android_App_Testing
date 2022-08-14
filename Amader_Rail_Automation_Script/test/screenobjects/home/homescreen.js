@@ -12,6 +12,9 @@ class HomeScreen {
     stationMapBtnSelector = `//*[@resource-id="com.decodelab.amaderrel:id/btnStationMap"]`
     numberBtnSelector = `//*[@resource-id="com.decodelab.amaderrel:id/btnImNumber"]`
     mobileTicketBtnSelector = `//*[@resource-id="com.decodelab.amaderrel:id/btnEtrain"]`
+    subscribeBtnSelector = `//*[@resource-id="com.decodelab.amaderrel:id/txAdsOff"]`
+
+    
 
     async isAppNameExist() {
         return await (await $(this.appNameTextSelector)).waitForExist({ timeout: 10000 })
@@ -26,23 +29,27 @@ class HomeScreen {
     }
 
     async clickSyncButton() {
-        await (await $(this.syncBtnSelector)).click()
+       await $(this.syncBtnSelector).click()
     }
     async clickSearchButton() {
-        await (await $(this.searchBtnSelector)).click()
+       await $(this.searchBtnSelector).click()
     }
     async clickTrainTimeButton() {
-        await (await $(this.timeBtnSelector)).click()
+        await $(this.timeBtnSelector).click()
     }
     async clickTicketPriceButton() {
-        await (await $(this.priceBtnSelector)).click()
+        await $(this.priceBtnSelector).click()
     }
     async clickTrainTackingButton() {
-        await (await $(this.trainTrackingBtnSelector)).click()
+       await $(this.trainTrackingBtnSelector).click()
     }
     async clickMobileTicketButton() {
-        await (await $(this.mobileTicketBtnSelector)).click()
+        await $(this.mobileTicketBtnSelector).click()
     }
+    async clickSubscribeButton() {
+        await  $(this.subscribeBtnSelector).click()
+    }
+
 
     async isSearchBoxDisplayed() {
         return await (await $(this.searchBtnSelector)).isDisplayed()
