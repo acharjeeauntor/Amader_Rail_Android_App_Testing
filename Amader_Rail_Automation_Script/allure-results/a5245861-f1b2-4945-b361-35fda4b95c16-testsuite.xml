@@ -1,0 +1,67 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660584122981' stop='1660584148393'>
+    <name>Verify Train Timeline Feature</name>
+    <title>Verify Train Timeline Feature</title>
+    <test-cases>
+        <test-case start='1660584122981' status='passed' stop='1660584143906'>
+            <name>TC _017: Verify User can view train list when search train by start and stop station name</name>
+            <title>TC _017: Verify User can view train list when search train by start and stop station name</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel-3a-test 10-10'/>
+                <parameter kind='argument' name='device' value='Pixel-3a-test 10-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660584143906' status='passed' stop='1660584144909'>
+            <name>TC _018: Verify User can view train details information when search train by start and stop station name</name>
+            <title>TC _018: Verify User can view train details information when search train by start and stop station name</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel-3a-test 10-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660584144910' status='passed' stop='1660584145748'>
+            <name>TC _019: Verify User can view train stopage station name</name>
+            <title>TC _019: Verify User can view train stopage station name</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel-3a-test 10-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660584145749' status='passed' stop='1660584148387'>
+            <name>TC _020: Verify User can view train ticket price details information</name>
+            <title>TC _020: Verify User can view train ticket price details information</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel-3a-test 10-10'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

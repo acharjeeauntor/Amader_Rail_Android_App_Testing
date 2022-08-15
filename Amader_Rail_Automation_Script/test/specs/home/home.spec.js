@@ -7,10 +7,14 @@ describe('Verify Home Screen', () => {
 
     before(async () => {
         await landingScreen.clickSkipBtn()
-        await registrationScreen.clickSkipRegistrationBtn()
     })
 
 
+    it('TC _007: Verify User can Skip Registration to the application', async () => {
+        await registrationScreen.clickSkipRegistrationBtn()
+        expect(await homeScreen.isAppNameExist()).toBeTruthy()
+ 
+     })
 
     it('TC _008: Verify user can view the App Name and Drawer icon in the top left corner', async () => {
         expect(await homeScreen.isNavigationDrawerExist()).toBeTruthy()

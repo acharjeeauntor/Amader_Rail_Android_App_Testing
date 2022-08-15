@@ -5,8 +5,8 @@ const registrationData = require("../../testdata/registrationData.json")
 
 describe('Verify Account/Account Information', () => {
 
-    var lastActivityName;
-    var lastPackageName;
+    // var lastActivityName;
+    // var lastPackageName;
 
     before(async () => {
         await landingScreen.clickSkipBtn()

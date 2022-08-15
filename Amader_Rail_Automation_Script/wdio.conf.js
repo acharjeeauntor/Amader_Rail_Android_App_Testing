@@ -1,13 +1,44 @@
+import allure from 'allure-commandline'
+
 exports.config = {
 
     port: 4723,
     
     specs: [
-        './test/specs/**/subscribe.spec.js'
+        
+            './test/specs/landing/landing.spec.js',
+            './test/specs/account/*.spec.js',
+            './test/specs/home/home.spec.js',
+            './test/specs/search/search.spec.js',
+            './test/specs/traintimeline/traintimeline.spec.js',
+            './test/specs/ticketprice/ticketprice.spec.js',
+            './test/specs/traintracking/*.spec.js',
+            './test/specs/mobileticket/mobileticket.spec.js',
+            './test/specs/subscribe/subscribe.spec.js'
+        
     ],
+    suites:{
+        account:[
+            
+            './test/specs/landing/landing.spec.js',
+            './test/specs/account/*.spec.js',
+            './test/specs/home/home.spec.js',
+            
+        ],
+        othersFeatures:[
+            
+            './test/specs/search/search.spec.js',
+            './test/specs/traintimeline/traintimeline.spec.js',
+            './test/specs/ticketprice/ticketprice.spec.js',
+            './test/specs/traintracking/*.spec.js',
+            './test/specs/mobileticket/mobileticket.spec.js',
+            './test/specs/subscribe/subscribe.spec.js'
+            
+        ]
+    },
 
     
-    maxInstances: 10,
+    maxInstances: 1,
    
     capabilities: [{
         platformName:"Android",
@@ -37,7 +68,31 @@ exports.config = {
    
     framework: 'mocha',
     
-    reporters: ['spec'],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
+    onComplete: function () {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                10000)
+
+            generation.on('exit', function (exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
 
 
     mochaOpts: {

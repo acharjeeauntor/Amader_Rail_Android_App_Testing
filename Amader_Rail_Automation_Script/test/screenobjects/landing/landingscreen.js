@@ -6,14 +6,16 @@ class LandingScreen {
 
     
     async isLiveTrackingLandingPageExist(){
-        return await (await $(this.liveTrackingTextSelector)).isExisting()
+        await $(this.liveTrackingTextSelector).waitForExist({timeout:10000})
+        return await $(this.liveTrackingTextSelector).isExisting()
     }
 
     async isNoticeBoardLandingPageExist(){
-       return await (await $(this.noticeBoardTextSelector)).isExisting()
+       return await $(this.noticeBoardTextSelector).isExisting()
     }
 
     async clickSkipBtn(){
+        await $(this.skipBtnSelector).waitForExist({timeout:10000})
         await $(this.skipBtnSelector).click()
     }
 
