@@ -52,7 +52,7 @@ exports.config = {
         // "appium:appWaitActivity":".RegistrationActivity"
     }],
    
-    logLevel: 'info',
+    logLevel: 'error',
     
     bail: 0,
     
