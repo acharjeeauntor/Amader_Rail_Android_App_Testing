@@ -7,7 +7,8 @@
     "clearAllure": "if [ -d allure-results ]; then rm -Rf allure-results; fi && if [ -d allure-report ]; then rm -Rf allure-report; fi",
     "test": "npm run clearAllure && npx wdio wdio.conf.js",
     "accountTest": "npm run clearAllure && npx wdio wdio.conf.js --suite account",
-    "otherFeaturesTest": "npm run clearAllure && npx wdio wdio.conf.js --suite othersFeatures"
+    "otherFeaturesTest": "npm run clearAllure && npx wdio wdio.conf.js --suite othersFeatures",
+    "allureReport": "allure serve"
   },
   "author": "Auntor Acharja",
   "license": "ISC",

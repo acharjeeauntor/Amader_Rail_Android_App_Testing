@@ -59,15 +59,10 @@ exports.config = {
     baseUrl: 'http://localhost',
     
     waitforTimeout: 10000,
-    
     connectionRetryTimeout: 120000,
-    
     connectionRetryCount: 3,
-    
     services: ['appium'],
-   
     framework: 'mocha',
-    
     reporters: ['spec',['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
